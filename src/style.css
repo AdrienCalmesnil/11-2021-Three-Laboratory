@@ -11,7 +11,10 @@ body
 {
     height: 100vh;
     font-family: 'Poppins';
-    background: #181818;
+    /* background: #181818; */
+    /* background: linear-gradient(#292929,#bada55); */
+    background: linear-gradient(135deg, #ff0000,#00e1FF);
+    /* background: linear-gradient(90deg, #ff0000,#FFFFFF,#00e1FF); */
 }
 
 body{
@@ -24,7 +27,8 @@ body{
     top: 0;
     left: 0;
     outline: none;
-    mix-blend-mode: exclusion;
+    /* mix-blend-mode: exclusion; */
+    /* mix-blend-mode:overlay; */
 }
 
 .container{
@@ -41,4 +45,7 @@ h1{
 
 section{
     height: 100vh;
+    /* background: linear-gradient(#bada55,#292929); */
+    background: linear-gradient(45deg, #ff0000,#00e1FF);
+    /* background: linear-gradient(90deg, #ff0000,#FFFFFF,#00e1FF); */
 }
