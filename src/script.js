@@ -3,6 +3,7 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import * as dat from 'dat.gui'
 import { PointLightHelper } from 'three'
+import gsap from 'gsap'
 
 // Loading
 const textureLoader = new THREE.TextureLoader()
@@ -14,6 +15,10 @@ const gui = new dat.GUI()
 
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
+
+// Timeline
+let tl = gsap.timeline()
+
 
 // Scene
 const scene = new THREE.Scene()
@@ -33,6 +38,10 @@ material.color = new THREE.Color(0x292929)
 const sphere = new THREE.Mesh(geometry,material)
 scene.add(sphere)
 
+// GSAP animation
+tl.to(sphere.rotation, {y: 4.7, z:6.3, duration:1.2})
+tl.to(sphere.scale, {x: 0.2, y:0.2, z:0.2, duration:1}, "-=1")
+
 // Lights
 
 const pointLight = new THREE.PointLight(0xffffff, 0.1)
@@ -43,7 +52,7 @@ scene.add(pointLight)
 
 // Light 2
 
-const pointLight2 = new THREE.PointLight(0xBADA55, 2)
+const pointLight2 = new THREE.PointLight(0xff0000, 2)
 pointLight2.position.set( -1.86, -0.28, -0.41)
 pointLight2.intensity = 1.3
 scene.add(pointLight2)
@@ -113,7 +122,7 @@ window.addEventListener('resize', () =>
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
 camera.position.x = 0
 camera.position.y = 0
-camera.position.z = 2
+camera.position.z = 0.5
 scene.add(camera)
 
 // Controls
