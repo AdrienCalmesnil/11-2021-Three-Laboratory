@@ -13,7 +13,7 @@ body
     font-family: 'Poppins';
     /* background: #181818; */
     /* background: linear-gradient(#292929,#bada55); */
-    background: linear-gradient(135deg, #ff0000,#00e1FF);
+    background: linear-gradient(135deg, green,#00e1FF);
     /* background: linear-gradient(90deg, #ff0000,#FFFFFF,#00e1FF); */
 }
 
@@ -46,6 +46,6 @@ h1{
 section{
     height: 100vh;
     /* background: linear-gradient(#bada55,#292929); */
-    background: linear-gradient(45deg, #ff0000,#00e1FF);
+    background: linear-gradient(45deg, green,#00e1FF);
     /* background: linear-gradient(90deg, #ff0000,#FFFFFF,#00e1FF); */
 }
