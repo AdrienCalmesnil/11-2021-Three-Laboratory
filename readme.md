@@ -1,5 +1,5 @@
-# Three.js Starter
-Courtesy of Bruno Simon of https://threejs-journey.xyz/
+# ThreeJS animation
+Play with it https://pin-the-time.netlify.app/
 
 ## Setup
 Download [Node.js](https://nodejs.org/en/download/).
