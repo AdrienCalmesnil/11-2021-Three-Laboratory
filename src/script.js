@@ -52,7 +52,7 @@ scene.add(pointLight)
 
 // Light 2
 
-const pointLight2 = new THREE.PointLight(0xAF33FF, 2)
+const pointLight2 = new THREE.PointLight(0xFF0000, 2)
 pointLight2.position.set( -1.86, -0.28, -0.41)
 pointLight2.intensity = 1.3
 scene.add(pointLight2)
@@ -64,12 +64,19 @@ light2.add(pointLight2.position, 'x').min(-6).max(6).step(0.01)
 light2.add(pointLight2.position, 'z').min(-3).max(3).step(0.01)
 light2.add(pointLight2, 'intensity').min(0).max(10).step(0.01)
 
+const light2Color = { color : 0xff0000 }
+
+light2.addColor(light2Color, 'color')
+    .onChange(() => {
+        pointLight2.color.set(light2Color.color)
+    })
+
 // const pointLight2Helper = new THREE.PointLightHelper(pointLight2)
 // scene.add(pointLight2Helper)
 
 // Light 3
 
-const pointLight3 = new THREE.PointLight(0xbada55, 2)
+const pointLight3 = new THREE.PointLight(0xe1ff, 2)
 pointLight3.position.set( 0.53, 0.04, 0.26)
 pointLight3.intensity = 1.82
 scene.add(pointLight3)
@@ -81,7 +88,7 @@ light3.add(pointLight3.position, 'x').min(-6).max(6).step(0.01)
 light3.add(pointLight3.position, 'z').min(-3).max(3).step(0.01)
 light3.add(pointLight3, 'intensity').min(0).max(10).step(0.01)
 
-const light3Color = { color : 0x0000FF }
+const light3Color = { color : 0xe1ff }
 
 light3.addColor(light3Color, 'color')
     .onChange(() => {
