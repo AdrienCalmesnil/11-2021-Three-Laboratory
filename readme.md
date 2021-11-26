@@ -1,5 +1,5 @@
 # ThreeJS animation
-Play with it https://pin-the-time.netlify.app/
+Play with it https://pinthetime.netlify.app/
 
 ## Setup
 Download [Node.js](https://nodejs.org/en/download/).
